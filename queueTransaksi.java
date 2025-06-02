@@ -1,8 +1,8 @@
 public class QueueTransaksi {
     TransaksiLayanan[] data;
-    int front;
-    int rear;
-    int size;
+    int front = 0;
+    int rear = -1;
+    int size = 0;
     int max;
 
     public QueueTransaksi(int max){
@@ -17,13 +17,13 @@ public class QueueTransaksi {
         }
         rear = (rear + 1) % max;
         data[rear] = transaksi;
-        size ++;
+        size++;
     }
 
     public void tampilkantransaksi(){
         System.out.println("Riwayat Transaksi");
         for (int i = 0; i < size; i++) {
-            int idx = (front + 1) % max;
+            int idx = (front + i) % max;
             data[idx].tampilkantransaksi();
         }
     }
