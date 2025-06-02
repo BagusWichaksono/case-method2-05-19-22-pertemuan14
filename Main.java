@@ -20,7 +20,14 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
-
+                    System.out.println("Nama Pasien :" );
+                    String nama = sc.nextLine();
+                    System.out.println("NIK : ");
+                    String nik = sc.nextLine();
+                    System.out.println("Keluhan : ");
+                    String keluhan = sc.nextLine();
+                    Pasien p = new Pasien(nama, nik, keluhan);
+                    antrian.tambahPasien(p);
                     break;
 
                 case 2:
