@@ -1,11 +1,11 @@
-public class queueTransaksi {
+public class QueueTransaksi {
     TransaksiLayanan [] data;
     int front;
     int rear;
     int size;
     int max;
 
-    public queueTransaksi(int max){
+    public QueueTransaksi(int max){
         this.max = max;
         data = new TransaksiLayanan[max];
     }
